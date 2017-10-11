@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "32686408748",
+    "firebase_url": "https://samples-ff8b4.firebaseio.com",
+    "project_id": "samples-ff8b4",
+    "storage_bucket": "samples-ff8b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32686408748:android:ae69560cce786dd9",
+        "android_client_info": {
+          "package_name": "com.example.hadeel.samples"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "32686408748-jid533436kv732v2b1jchvronk0849hk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlW4obMtEPvdfWxpnv6AkAx6WnJOjgXRw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

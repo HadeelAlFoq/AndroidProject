@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Samples</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="err_msg_name">ادخل الاسم الكامل</string>
+    <string name="err_msg_email">ادخل ايميل صحيص</string>
+    <string name="err_msg_phone">ادخل رقم الهاتف </string>
+    <string name="hintName">ادخل الاسم</string>
+    <string name="hintPhone">ادخل رقم الهاتف</string>
+    <string name="hintEmail">ادخل الايميل</string>
+    <string name="insert">ادراج</string>
+    <string name="hintPassword">ادخل الرمز السري</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="Burger">برغر</string>
+    <string name="start">ابدا</string>
+    <string name="like">    اعجابات   </string>
+    <string name="comment">     تعليقات    </string>
+    <string name="share">  3   مشاركات   </string>
+    <string name="likeic">اعجاب </string>
+    <string name="commentic">تعليق</string>
+    <string name="shareic">مشاركه</string>
+    <string name="name">اسم : </string>
+    <string name="phone">رقم : </string>
+    <string name="email">ايميل : </string>
+    <string name="kitchen">مطبخ اورانج</string>
+    <string name="addFri">اضافه صديق</string>
+    <string name="lang">  اللغه </string>
+    <string name="emailMsg"> يميل</string>
+    <string name="LOGIN">تسجيل الدخول</string>
+    <string name="forget">هل نسيت الرمز سري؟</string>
+    <string name="call"> "اتصال
+انقر لاجراء اتصال             </string>
+    <string name="map">"الخريطه
+انقر لرؤيه الخريطه</string>
+    <string name="browser">"الموقع
+انقر لرؤيه الموقع</string>
+    <string name="send">ارسال</string>
+    <string name="calenBtn"> ضبط حدث</string>
+    <string name="setTime"> ضبط الوقت 00:00</string>
+    <string name="setDate"> ضبط التاريخ dd/mm/yy</string>
+    <string name="setTitle"> ادخل العنوان </string>
+    <string name="setDescription"> ادخل الوصف</string>
+    <string name="setLocation">ادخل الموقع</string>
+    <string name="num">0777068453</string>
+    <string name="country">عمان</string>
+    <string name="to">الى...</string>
+    <string name="event">ضبط حدث</string>
+    <string name="subject">الموضوع...</string>
+    <string name="message">الرساله....</string>
+    <string name="age"> العمر: </string>
+    <string name="lastName">الاسم الاخير: </string>
+    <string name="ageHint">دخل عمرك </string>
+    <string name="commentHint">تعليق....</string>
+
+</resources>

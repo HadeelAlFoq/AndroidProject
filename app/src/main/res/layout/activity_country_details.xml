@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hadeel.samples.CountryDetails">
+    <include
+
+        layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:background="@color/back">
+        <View
+            android:layout_width="match_parent"
+
+            android:layout_height="3dp"
+            android:background="@color/login"
+            />
+
+        <View
+            android:layout_width="match_parent"
+
+            android:layout_height="4dp"
+            android:background="@color/colorPrimary"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:text="Orange"
+            android:textSize="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="70dp"
+            android:fontFamily="casual"
+            android:textStyle="italic"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimary"/>
+
+
+        <View
+            android:layout_width="match_parent"
+
+            android:layout_height="3dp"
+            android:background="@color/login"
+            />
+        <View
+            android:layout_width="match_parent"
+
+            android:layout_height="4dp"
+            android:background="@color/colorPrimary"
+            />
+
+
+
+
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="210dp"
+        android:orientation="vertical">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true"
+            >
+
+            <TextView
+                android:id="@+id/call"
+                android:padding="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_call"
+                android:drawablePadding="10dp"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/call"/>
+            <View
+                android:layout_marginTop="75dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                />
+            <TextView
+                android:id="@+id/website"
+                android:padding="12dp"
+                android:layout_marginTop="80dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_web"
+                android:drawablePadding="10dp"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/map"/>
+            <View
+                android:layout_marginTop="150dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                />
+            <TextView
+                android:id="@+id/location"
+                android:padding="12dp"
+                android:layout_marginTop="160dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_location"
+                android:drawablePadding="10dp"
+
+
+                android:textColor="@color/colorPrimary"
+                android:text="@string/browser"/>
+
+
+
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/linear"
+        android:src="@drawable/ic_eamail2"
+        android:background="@drawable/circle1"
+        app:layout_anchorGravity="bottom|right|end"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"/>
+
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

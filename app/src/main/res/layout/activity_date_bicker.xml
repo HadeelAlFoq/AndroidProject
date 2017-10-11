@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    tools:context="com.example.hadeel.samples.Date_bicker">
+    <include layout="@layout/toolbar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SET Your Event"
+        android:layout_marginTop="5dp"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:fontFamily="casual"
+        android:textSize="20dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/colorAccent"
+        />
+    <!--<android.support.v4.widget.ScrollView-->
+        <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="500dp">-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="500dp"/>-->
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:layout_marginTop="1dp"
+
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/date"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+
+                    android:hint="@string/setDate"
+                    android:padding="8dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/dateBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:paddingStart="5dp"
+                android:paddingTop="20dp"
+                android:src="@drawable/ic_date" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/time"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:hint="@string/setTime"
+                    android:padding="12dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/timeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:paddingStart="5dp"
+                android:paddingTop="20dp"
+                android:src="@drawable/ic_time" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="170dp"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/titleCET"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:hint="@string/setTitle"
+                    android:padding="8dp" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/descriptionCET"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:hint="@string/setDescription"
+                    android:inputType="textMultiLine"
+                    android:padding="8dp"
+                    android:scrollbars="vertical" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="330dp"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_Location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/locationCET"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:hint="@string/setLocation"
+                    android:padding="8dp" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+
+    <Button
+        android:id="@+id/SendCalender"
+        android:layout_width="189dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorAccent"
+        android:text="@string/calenBtn"
+        android:textColor="@color/login" />
+        <!--</android.support.v4.widget.ScrollView>-->
+
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Samples</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="err_msg_name">Enter your full name</string>
+    <string name="err_msg_email">Enter valid email address</string>
+    <string name="err_msg_phone">Enter phone number </string>
+    <string name="hintName">Enter Name</string>
+    <string name="hintPhone">Enter phone</string>
+    <string name="hintEmail">Enter Email</string>
+    <string name="insert">Insert</string>
+    <string name="hintPassword">Enter Password</string>
+    <string name="login">LOGIN</string>
+    <string name="Burger">Burger</string>
+    <string name="start">Start</string>
+    <string name="like">   like    </string>
+    <string name="comment">    comment  </string>
+    <string name="share">    3 shares</string>
+    <string name="likeic"> Like </string>
+    <string name="commentic"> Comment</string>
+    <string name="shareic"> Share</string>
+    <string name="name">Name : </string>
+    <string name="phone">Phone : </string>
+    <string name="email">Email : </string>
+    <string name="kitchen">Orange Kitchen</string>
+    <string name="addFri">add friend</string>
+    <string name="lang">  language </string>
+    <string name="LOGIN">Login</string>
+    <string name="send"> Message</string>
+    <string name="emailMsg"> Email</string>
+    <string name="calenBtn"> Set Event</string>
+    <string name="setTime"> Set time 00:00</string>
+    <string name="setDate"> Set date dd/mm/yy</string>
+    <string name="setTitle"> Enter Title</string>
+    <string name="setDescription"> Enter Description</string>
+    <string name="setLocation"> Enter Location</string>
+
+    <string name="forget">FORGOT PASSWORD?</string>
+    <string name="country">Amman</string>
+    <string name="num">0777068453</string>
+    <string name="to">To...</string>
+    <string name="event">Set Your Event</string>
+    <string name="subject">Subject..</string>
+    <string name="message">Massege</string>
+    <string name="call">Call \nclick to make call </string>
+    <string name="browser">Location \nClick to see location </string>
+    <string name="map">Orange Website \nto visit web site  online "</string>
+    <string name="age">Age : </string>
+    <string name="ageHint">Enter Your Age </string>
+
+    <string name="lastName">Last Name is: </string>
+    <string name="commentHint">Comment...</string>
+
+</resources>

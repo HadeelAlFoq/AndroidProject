@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".GoogleMap">
+    <item
+        android:id="@+id/None"
+        android:title="none"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/Normal"
+        android:title="normal"
+        app:showAsAction="ifRoom|"/>
+    <item
+        android:id="@+id/Satelite"
+        android:title="satelite"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/Hybird"
+        android:title="hybird"
+        app:showAsAction="ifRoom"/>
+
+    </menu>

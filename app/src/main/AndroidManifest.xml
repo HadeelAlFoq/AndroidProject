@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hadeel.samples">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <permission
+        android:name="com.example.hadeel.samples.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.hadeel.samples.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gfs.permission.READ_GSERVICES" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Home" />
+        <activity android:name=".CountryDetails" />
+        <activity android:name=".DataBase" />
+        <activity android:name=".InsertDataActivity" />
+        <activity android:name=".DisplaySQLiteDataActivity" />
+        <activity android:name=".Bottom_tab" />
+        <activity android:name=".TabActivity" />
+
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".MyFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".GoogleMap" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAei_869KH1D6hwqG2M35Gx5OT9EF5Aims" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- <receiver -->
+        <!-- android:name="com.google.android.gms.analytics.AnalyticsReceiver" -->
+        <!-- android:enabled="true"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH"/> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+
+
+        <!-- <receiver -->
+        <!-- android:name="com.google.android.gms.analytics.CampaignTrackingReceiver" -->
+        <!-- android:exported="true"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.android.vending.INSTALL_REFERRER"/> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+
+
+        <!-- <service -->
+        <!-- android:name="com.google.android.gms.analytics.AnalyticsService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="false"/> -->
+
+
+        <!-- <service android:name="com.google.android.gms.analytics.CampaignTrackingService"/> -->
+
+        <application android:name="android.support.multidex.MultiDexApplication" />
+
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".personActivity" />
+        <activity android:name=".Option_Activity" />
+        <activity android:name=".LanguagyActivity" />
+        <activity android:name=".Massage" />
+        <activity android:name=".CommentTable_Activity" />
+        <activity android:name=".Calender" />
+        <activity android:name=".Date_bicker"></activity>
+    </application>
+
+</manifest>

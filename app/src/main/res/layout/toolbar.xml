@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.Toolbar
+        android:layout_marginTop="0dp"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark"
+
+
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+        <!--<TextView-->
+            <!--android:id="@+id/textTool"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:background="@color/colorPrimary"-->
+            <!--android:drawableLeft="@drawable/ic_back"-->
+            <!--android:drawablePadding="8dp"-->
+            <!--android:padding="12dp"-->
+            <!--android:textSize="20dp"-->
+            <!--android:layout_marginStart="2dp"-->
+
+            <!--android:textColor="@color/login" />-->
+
+
+
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+</LinearLayout>

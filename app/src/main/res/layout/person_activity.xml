@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.hadeel.samples.personActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_marginTop="0dp"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+
+
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+    <TextView
+        android:id="@+id/toolbarText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:drawableLeft="@drawable/ic_back"
+        android:drawablePadding="22dp"
+        android:padding="10dp"
+        android:text="back"
+        android:textColor="@color/login" />
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+
+        android:id="@+id/personRececlerView"
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@drawable/nav_show"
+        app:itemTextColor="@drawable/nav_show"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="400dp"
+        android:layout_marginBottom="0dp"
+
+        app:menu="@menu/bottom">
+
+    </android.support.design.widget.BottomNavigationView>
+
+
+</RelativeLayout>
