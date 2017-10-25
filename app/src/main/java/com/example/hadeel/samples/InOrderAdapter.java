@@ -15,9 +15,9 @@ import java.util.ArrayList;
  */
 
 public class InOrderAdapter extends RecyclerView.Adapter<InOrderAdapter.ViewHolder> {
-    ArrayList<inOrderItem> orderList=new ArrayList<>();
+    ArrayList<InOrderItemModel> orderList=new ArrayList<>();
     private Context mContext;
-    public  InOrderAdapter(ArrayList<inOrderItem> orderList,Context mContext){
+    public  InOrderAdapter(ArrayList<InOrderItemModel> orderList, Context mContext){
         this.orderList=orderList;
         this.mContext=mContext;
     }
@@ -30,7 +30,7 @@ public class InOrderAdapter extends RecyclerView.Adapter<InOrderAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(InOrderAdapter.ViewHolder holder, int position) {
-        final  inOrderItem item=orderList.get(position);
+        final InOrderItemModel item=orderList.get(position);
         holder.title.setText(orderList.get(position).getTitle());
         holder.meal.setImageResource(orderList.get(position).getImagemeal());
 

@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class CountryDetails extends AppCompatActivity {
+public class CountryDetailsActivity extends AppCompatActivity {
     String nameCountry;
     TextView countryToo,call,location,website;
     FloatingActionButton message;
@@ -32,7 +32,6 @@ public class CountryDetails extends AppCompatActivity {
 
         }
         message=(FloatingActionButton) findViewById(R.id.message);
-        countryToo=(TextView) findViewById(R.id.textTool);
         call=(TextView) findViewById(R.id.call);
         location=(TextView)findViewById(R.id.location);
         website=(TextView)findViewById(R.id.website);
@@ -61,8 +60,8 @@ public class CountryDetails extends AppCompatActivity {
         });
         location.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
-                Intent l=new Intent(CountryDetails.this,GoogleMap.class);
-                l.putExtra("name","Map");
+                Intent l=new Intent(CountryDetailsActivity.this,GoogleMapActivity.class);
+                l.putExtra("name",getString(R.string.maptitle));
                 startActivity(l);
 
             }
@@ -70,8 +69,8 @@ public class CountryDetails extends AppCompatActivity {
         message.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent m=new Intent(CountryDetails.this,Massage.class);
-                m.putExtra("name","Message");
+                Intent m=new Intent(CountryDetailsActivity.this,MassageActivity.class);
+                m.putExtra("name",getString(R.string.message));
                 startActivity(m);
             }
         });

@@ -9,8 +9,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.Response;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,12 +17,12 @@ import java.util.List;
  */
 
 public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHolder> {
-    private static   List<country> countryList;
+    private static   List<CountryModel> countryModelList;
 
-    country co=new country();
+    CountryModel co=new CountryModel();
     private Context mContext;
-    public CountryAdapter (List<country> countryList, Context mContext){
-        this.countryList=countryList;
+    public CountryAdapter (List<CountryModel> countryModelList, Context mContext){
+        this.countryModelList = countryModelList;
         this.mContext=mContext;
         String name;
 
@@ -37,7 +35,7 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(CountryAdapter.ViewHolder holder, int position) {
-      final country count=countryList.get(position);
+      final CountryModel count= countryModelList.get(position);
         holder.country.setText(count.getCountry());
         holder.setItemClickListener(new ItemClickListener() {
             @Override
@@ -49,7 +47,7 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
                 }
                 else {
                     //Toast.makeText(mContext,"hello",Toast.LENGTH_LONG).show();
-                    Intent i = new Intent(mContext,CountryDetails.class);
+                    Intent i = new Intent(mContext,CountryDetailsActivity.class);
                     i.putExtra("name",count.getCountry());
                     i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     mContext.startActivity(i);
@@ -65,17 +63,12 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-        return countryList.size();
+        return countryModelList.size();
     }
-//    public  void Filter(ArrayList<country> newList,country co){
-//        countryList=new ArrayList<>();
-//        countryList.addAll(newList);
-//        notifyDataSetChanged();
-//    }
 
-    public static void Filter(ArrayList<country> newList) {
-        countryList=new ArrayList<>();
-        countryList.addAll(newList);
+    public static void Filter(ArrayList<CountryModel> newList) {
+        countryModelList =new ArrayList<>();
+        countryModelList.addAll(newList);
 
     }
 

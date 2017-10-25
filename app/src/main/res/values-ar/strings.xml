@@ -2,8 +2,9 @@
     <string name="app_name">Samples</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
+    <string name="err_msg_age">ادخل سنه ميلادك </string>
     <string name="err_msg_name">ادخل الاسم الكامل</string>
-    <string name="err_msg_email">ادخل ايميل صحيص</string>
+    <string name="err_msg_email">ادخل ايميل صحيح</string>
     <string name="err_msg_phone">ادخل رقم الهاتف </string>
     <string name="hintName">ادخل الاسم</string>
     <string name="hintPhone">ادخل رقم الهاتف</string>
@@ -15,7 +16,7 @@
     <string name="start">ابدا</string>
     <string name="like">    اعجابات   </string>
     <string name="comment">     تعليقات    </string>
-    <string name="share">  3   مشاركات   </string>
+    <string name="share">     مشاركات   </string>
     <string name="likeic">اعجاب </string>
     <string name="commentic">تعليق</string>
     <string name="shareic">مشاركه</string>
@@ -25,6 +26,7 @@
     <string name="kitchen">مطبخ اورانج</string>
     <string name="addFri">اضافه صديق</string>
     <string name="lang">  اللغه </string>
+    <string name="lang1">  اللغه المختاره: </string>
     <string name="emailMsg"> يميل</string>
     <string name="LOGIN">تسجيل الدخول</string>
     <string name="forget">هل نسيت الرمز سري؟</string>
@@ -43,13 +45,27 @@
     <string name="setLocation">ادخل الموقع</string>
     <string name="num">0777068453</string>
     <string name="country">عمان</string>
-    <string name="to">الى...</string>
+    <string name="to">الى</string>
+    <string name="DataBase">قاعدة البيانات  </string>
+    <string name="Bottoms">وسائل تواصل الاجتماعي</string>
+    <string name="Tabs">وجبات </string>
+    <string name="Setting">     الضبط</string>
+    <string name="Calender">  المخطط</string>
     <string name="event">ضبط حدث</string>
-    <string name="subject">الموضوع...</string>
-    <string name="message">الرساله....</string>
+    <string name="subject">الموضوع</string>
+    <string name="message">رساله</string>
+    <string name="AddFriend">اضافة صديق</string>
+    <string name="setEventTitle"> ضبط حدث</string>
+    <string name="insertTitle">ادراج</string>
+    <string name="HomeTitle">الصفحه الرئيسية</string>
+    <string name="startR">بدأ</string>
+    <string name="restartR">إعادة البداء</string>
+
+    <string name="maptitle">الخريطة</string>
+    <string name="commenttitle">تعليق</string>
     <string name="age"> العمر: </string>
     <string name="lastName">الاسم الاخير: </string>
-    <string name="ageHint">دخل عمرك </string>
+    <string name="ageHint">دخل سنه ميلادك </string>
     <string name="commentHint">تعليق....</string>
 
 </resources>

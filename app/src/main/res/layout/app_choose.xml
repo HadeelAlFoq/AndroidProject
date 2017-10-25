@@ -7,125 +7,37 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+   >
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="254dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="1dp"
-        android:layout_weight="0.27"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
 
-        <Button
-            android:id="@+id/one"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="10dp"
 
-            android:layout_marginTop="50dp"
-            android:background="@drawable/circle1"
-            android:text="1"
-            android:textColor="@color/color4" />
+        android:gravity="center">
 
         <Button
             android:id="@+id/two"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="24dp"
-
-            android:layout_marginTop="20dp"
-            android:background="@drawable/circle1"
-            android:text="2"
-            android:textColor="@color/color8" />
-
-        <Button
-            android:id="@+id/three"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="32dp"
-
-            android:layout_marginTop="50dp"
-            android:background="@drawable/circle1"
-            android:text="3"
-            android:textColor="@color/color7" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="300dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="5dp"
-        android:layout_weight="0.3"
-
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/four"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="1dp"
-
-
-            android:background="@drawable/circle1"
-            android:text="4"
-            android:textColor="@color/color6" />
-
-        <ImageView
-            android:id="@+id/arrow"
-            android:layout_width="130dp"
-            android:layout_height="70dp"
-
-            android:layout_marginLeft="10dp"
-
-            android:src="@drawable/arrow" />
-
-        <Button
-            android:id="@+id/fife"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="5dp"
-
-
-            android:background="@drawable/circle1"
-            android:text="5"
-            android:textColor="@color/color5" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="254dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:layout_weight="0.20">
-
-        <Button
-            android:id="@+id/six"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
             android:layout_marginStart="10dp"
 
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/circle1"
-            android:text="6"
+            android:text="2"
             android:textColor="@color/color4" />
 
         <Button
-            android:id="@+id/siven"
+            android:id="@+id/one"
 
             android:layout_width="50dp"
             android:layout_height="50dp"
 
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="0.10dp"
             android:background="@drawable/circle1"
-            android:text="7"
+            android:text="1"
             android:textColor="@color/color8" />
 
         <Button
@@ -134,21 +46,109 @@
             android:layout_height="50dp"
             android:layout_marginStart="32dp"
 
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/circle1"
             android:text="8"
+            android:textColor="@color/color7" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+
+
+
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/three"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+
+
+            android:background="@drawable/circle1"
+            android:text="3"
+            android:textColor="@color/color6" />
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+
+            android:layout_marginStart="5dp"
+
+            android:src="@drawable/arrow" />
+
+        <Button
+            android:id="@+id/siven"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+
+            android:layout_marginStart="10dp"
+
+            android:background="@drawable/circle1"
+            android:text="7"
+            android:textColor="@color/color5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+
+
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/four"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+
+
+            android:background="@drawable/circle1"
+            android:text="4"
+            android:textColor="@color/color4" />
+
+        <Button
+            android:id="@+id/fife"
+
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/circle1"
+            android:text="5"
+            android:textColor="@color/color8" />
+
+        <Button
+            android:id="@+id/six"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+
+            android:layout_marginTop="1dp"
+            android:background="@drawable/circle1"
+            android:text="6"
             android:textColor="@color/color7" />
     </LinearLayout>
 
     <Button
         android:id="@+id/start"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/linearLayout3"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:layout_marginTop="43dp"
-        android:layout_weight="0.09"
+        android:layout_marginTop="25dp"
+
         android:background="@color/colorAccent"
         android:text="@string/start"
         android:textColor="@color/color1" />

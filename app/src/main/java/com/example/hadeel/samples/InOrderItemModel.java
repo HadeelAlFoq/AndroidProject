@@ -4,7 +4,7 @@ package com.example.hadeel.samples;
  * Created by hadeel on 9/11/2017.
  */
 
-public class inOrderItem {
+public class InOrderItemModel {
     private int Imagemeal;
     private String title;
 

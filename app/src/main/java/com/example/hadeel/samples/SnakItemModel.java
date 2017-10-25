@@ -4,7 +4,7 @@ package com.example.hadeel.samples;
  * Created by hadeel on 9/11/2017.
  */
 
-public class snakItem {
+public class SnakItemModel {
     private int logo;
     private String title,title2;
 

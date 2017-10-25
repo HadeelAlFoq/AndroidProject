@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class SnakFragment extends Fragment {
     RecyclerView recyclerView;
-    ArrayList<snakItem> snakList=new ArrayList<>();
+    ArrayList<SnakItemModel> snakList=new ArrayList<>();
     SnakAdapter adapter;
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,19 +34,19 @@ public class SnakFragment extends Fragment {
 
     }
     public void preperData(){
-        snakItem item= new snakItem();
+        SnakItemModel item= new SnakItemModel();
         item.setLogo(R.drawable.alya);
         item.setTitle("BURGER KING");
         item.setTitle2("Buy");
         snakList.add(item);
 
-        snakItem item1= new snakItem();
+        SnakItemModel item1= new SnakItemModel();
         item1.setLogo(R.drawable.burger);
         item1.setTitle("MAC");
         item1.setTitle2("Buy");
         snakList.add(item1);
 
-        snakItem item2= new snakItem();
+        SnakItemModel item2= new SnakItemModel();
         item2.setLogo(R.drawable.knafa);
         item2.setTitle("KFC");
         item2.setTitle2("Buy");

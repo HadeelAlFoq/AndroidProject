@@ -5,6 +5,7 @@
     <string name="err_msg_name">Enter your full name</string>
     <string name="err_msg_email">Enter valid email address</string>
     <string name="err_msg_phone">Enter phone number </string>
+    <string name="err_msg_age">Enter your birthday year </string>
     <string name="hintName">Enter Name</string>
     <string name="hintPhone">Enter phone</string>
     <string name="hintEmail">Enter Email</string>
@@ -15,7 +16,7 @@
     <string name="start">Start</string>
     <string name="like">   like    </string>
     <string name="comment">    comment  </string>
-    <string name="share">    3 shares</string>
+    <string name="share">     shares</string>
     <string name="likeic"> Like </string>
     <string name="commentic"> Comment</string>
     <string name="shareic"> Share</string>
@@ -24,29 +25,46 @@
     <string name="email">Email : </string>
     <string name="kitchen">Orange Kitchen</string>
     <string name="addFri">add friend</string>
-    <string name="lang">  language </string>
+    <string name="lang">  Language </string>
+    <string name="lang1">  Language Selected : </string>
     <string name="LOGIN">Login</string>
     <string name="send"> Message</string>
     <string name="emailMsg"> Email</string>
+    <string name="setEventTitle"> Set Your Event</string>
+
     <string name="calenBtn"> Set Event</string>
     <string name="setTime"> Set time 00:00</string>
     <string name="setDate"> Set date dd/mm/yy</string>
     <string name="setTitle"> Enter Title</string>
     <string name="setDescription"> Enter Description</string>
     <string name="setLocation"> Enter Location</string>
+    <string name="insertTitle">Insert</string>
+    <string name="HomeTitle">Home</string>
+    <string name="startR">Start</string>
+    <string name="restartR">ReStart</string>
 
     <string name="forget">FORGOT PASSWORD?</string>
+    <string name="AddFriend">Add Friend</string>
+
     <string name="country">Amman</string>
     <string name="num">0777068453</string>
-    <string name="to">To...</string>
+    <string name="to">To</string>
+    <string name="commenttitle">Comment</string>
+
+    <string name="maptitle">Map</string>
+    <string name="DataBase">DataBase</string>
+    <string name="Bottoms">social media</string>
+    <string name="Tabs">Meals</string>
+    <string name="Setting">Setting</string>
+    <string name="Calender">Calender</string>
     <string name="event">Set Your Event</string>
-    <string name="subject">Subject..</string>
+    <string name="subject">Subject</string>
     <string name="message">Massege</string>
     <string name="call">Call \nclick to make call </string>
-    <string name="browser">Location \nClick to see location </string>
-    <string name="map">Orange Website \nto visit web site  online "</string>
+    <string name="map">Location \nClick to see location </string>
+    <string name="browser">Orange Website \nto visit web site  online "</string>
     <string name="age">Age : </string>
-    <string name="ageHint">Enter Your Age </string>
+    <string name="ageHint">Enter Your Birth Year </string>
 
     <string name="lastName">Last Name is: </string>
     <string name="commentHint">Comment...</string>

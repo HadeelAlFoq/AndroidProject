@@ -15,7 +15,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Locale;
 
-public class Massage extends AppCompatActivity {
+public class MassageActivity extends AppCompatActivity {
     EditText subject,to,message;
     TextView toolbarText;
     Button record,send,email;
@@ -48,13 +48,11 @@ public class Massage extends AppCompatActivity {
                 onBackPressed();
             }
         });
-        toolbarText= (TextView) findViewById(R.id.textTool);
         subject=(EditText) findViewById(R.id.subjectContent);
         to=(EditText) findViewById(R.id.resever);
         message=(EditText) findViewById(R.id.messageContent);
         email=(Button) findViewById(R.id.sendEmail);
 
-       // record=(Button) findViewById(R.id.record);
 
         send=(Button) findViewById(R.id.send);
 

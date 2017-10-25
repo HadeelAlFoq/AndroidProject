@@ -5,7 +5,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -17,9 +16,9 @@ import de.hdodenhof.circleimageview.CircleImageView;
  */
 
 public class SnakAdapter extends RecyclerView.Adapter<SnakAdapter.ViewHolder> {
-    ArrayList<snakItem> snakList=new ArrayList<>();
+    ArrayList<SnakItemModel> snakList=new ArrayList<>();
     private Context mContext;
-    public SnakAdapter(ArrayList<snakItem> snakList,Context mContext){
+    public SnakAdapter(ArrayList<SnakItemModel> snakList, Context mContext){
         this.snakList=snakList;
         this.mContext=mContext;
     }
@@ -31,7 +30,7 @@ public class SnakAdapter extends RecyclerView.Adapter<SnakAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(SnakAdapter.ViewHolder holder, int position) {
-        final snakItem item=snakList.get(position);
+        final SnakItemModel item=snakList.get(position);
         holder.title.setText(snakList.get(position).getTitle());
         holder.title2.setText(snakList.get(position).getTitle2());
         holder.logo.setImageResource(snakList.get(position).getLogo());

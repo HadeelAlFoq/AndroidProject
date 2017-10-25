@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class InOrderFragment extends Fragment {
     RecyclerView recyclerView;
-    ArrayList<inOrderItem> orderList=new ArrayList<>();
+    ArrayList<InOrderItemModel> orderList=new ArrayList<>();
     InOrderAdapter adapter;
     RecyclerView.LayoutManager layoutManager;
     public void onCreate(Bundle savedInstanceState) {
@@ -37,61 +37,61 @@ public class InOrderFragment extends Fragment {
         return rootView;
     }
     public void preperData(){
-        inOrderItem item= new inOrderItem ();
+        InOrderItemModel item= new InOrderItemModel();
         item.setImagemeal(R.drawable.album1);
         item.setTitle("BURGER ");
 
         orderList.add(item);
 
-        inOrderItem item1= new inOrderItem ();
+        InOrderItemModel item1= new InOrderItemModel();
         item1.setImagemeal(R.drawable.album2);
         item1.setTitle("pizza");
 
         orderList.add(item1);
 
-        inOrderItem item2= new inOrderItem ();
+        InOrderItemModel item2= new InOrderItemModel();
         item2.setImagemeal(R.drawable.album3);
         item2.setTitle("zinger");
 
         orderList.add(item2);
 
-        inOrderItem item3= new inOrderItem ();
+        InOrderItemModel item3= new InOrderItemModel();
         item3.setImagemeal(R.drawable.album4);
         item3.setTitle("sochi");
 
         orderList.add(item3);
 
-        inOrderItem item4= new inOrderItem ();
+        InOrderItemModel item4= new InOrderItemModel();
         item4.setImagemeal(R.drawable.album5);
         item4.setTitle("kabab");
 
         orderList.add(item4);
 
-        inOrderItem item5= new inOrderItem ();
+        InOrderItemModel item5= new InOrderItemModel();
         item5.setImagemeal(R.drawable.album6);
         item5.setTitle("maghareta");
 
         orderList.add(item5);
 
-        inOrderItem item6= new inOrderItem ();
+        InOrderItemModel item6= new InOrderItemModel();
         item6.setImagemeal(R.drawable.album7);
         item6.setTitle("dwale");
 
         orderList.add(item6);
 
-        inOrderItem item7= new inOrderItem ();
+        InOrderItemModel item7= new InOrderItemModel();
         item7.setImagemeal(R.drawable.album8);
         item7.setTitle("checken");
 
         orderList.add(item7);
 
-        inOrderItem item8= new inOrderItem ();
+        InOrderItemModel item8= new InOrderItemModel();
         item8.setImagemeal(R.drawable.album9);
         item8.setTitle("dessert");
 
         orderList.add(item8);
 
-        inOrderItem item9= new inOrderItem ();
+        InOrderItemModel item9= new InOrderItemModel();
         item9.setImagemeal(R.drawable.album10);
         item9.setTitle("passta");
 

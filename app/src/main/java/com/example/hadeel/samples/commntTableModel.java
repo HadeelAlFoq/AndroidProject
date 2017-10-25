@@ -4,7 +4,7 @@ package com.example.hadeel.samples;
  * Created by hadeel on 9/25/2017.
  */
 
-public class commntTableModel {
+public class CommntTableModel {
     private String comment;
 
     public String getComment() {

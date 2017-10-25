@@ -17,7 +17,7 @@ import java.util.Random;
  * Created by hadeel on 9/16/2017.
  */
 
-public class App_chooses_Fragment extends Fragment {
+public class AppChoosesFragment extends Fragment {
     Random r;
     boolean restart=false;
     int angle;
@@ -53,7 +53,7 @@ public class App_chooses_Fragment extends Fragment {
                     rotate.setDuration(1000);
                     rotate.setInterpolator(new AccelerateDecelerateInterpolator());
                     arrow.startAnimation(rotate);
-                    start.setText("start");
+                    start.setText(getResources().getString(R.string.startR));
                     restart=false;
                 }
                 else {
@@ -65,7 +65,7 @@ public class App_chooses_Fragment extends Fragment {
                     arrow.startAnimation(rotate);
 
                     restart=true;
-                    start.setText("reStart");
+                    start.setText(getResources().getString(R.string.restartR));
 
             }
         }

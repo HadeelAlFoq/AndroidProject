@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
 
-    tools:context="com.example.hadeel.samples.Massage">
+    tools:context="com.example.hadeel.samples.MassageActivity">
 
 
     <include layout="@layout/toolbar"/>
@@ -18,7 +18,7 @@
         android:gravity="center">
         <TextView
             android:id="@id/title"
-            android:text="Message"
+            android:text=""
             android:textSize="30dp"
             android:fontFamily="casual"
             android:textStyle="bold"

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/back"
-    tools:context="com.example.hadeel.samples.Option_Activity">
+    tools:context="com.example.hadeel.samples.OptionActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
         android:layout_width="150dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/circle1"
-
+        android:scaleType="fitXY"
         android:layout_height="150dp"
         android:layout_gravity="center"
 

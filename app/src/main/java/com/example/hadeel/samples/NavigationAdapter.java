@@ -11,16 +11,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by hadeel on 9/6/2017.
  */
 
 public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.ViewHolder> {
-    ArrayList<DrawerItem> navList=new ArrayList<>();
+
+    ArrayList<DrawerItemModel> navList=new ArrayList<>();
     private Context mContext;
-    public NavigationAdapter (ArrayList<DrawerItem> navList,Context mContext){
+    public NavigationAdapter (ArrayList<DrawerItemModel> navList, Context mContext){
         this.mContext=mContext;
         this.navList=navList;
 
@@ -33,7 +33,7 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
 
     @Override
     public void onBindViewHolder(NavigationAdapter.ViewHolder holder, int position) {
-        final DrawerItem item=navList.get(position);
+        final DrawerItemModel item=navList.get(position);
         holder.title.setText(navList.get(position).getTitle());
         holder.icon.setImageResource(navList.get(position).getIcon());
         holder.setItemClickListener(new ItemClickListener() {
@@ -48,38 +48,38 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
                     switch (position) {
                         case 0:
                         Intent i = new Intent(mContext, DisplaySQLiteDataActivity.class);
-                        i.putExtra("name", item.getTitle());
+                        i.putExtra("name", mContext.getResources().getString(R.string.DataBase));
                         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         mContext.startActivity(i);
-                        Toast.makeText(mContext, item.getTitle(), Toast.LENGTH_LONG).show();
+                       // Toast.makeText(mContext, item.getTitle(), Toast.LENGTH_LONG).show();
                             break;
                         case 1:
-                            Intent b=new Intent(mContext,Bottom_tab.class);
-                            b.putExtra("name", item.getTitle());
+                            Intent b=new Intent(mContext,BottomTabActivity.class);
+                            b.putExtra("name",mContext.getResources().getString(R.string.Bottoms) );
                             b.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             mContext.startActivity(b);
-                            Toast.makeText(mContext, item.getTitle(), Toast.LENGTH_LONG).show();
+                           // Toast.makeText(mContext, item.getTitle(), Toast.LENGTH_LONG).show();
                             break;
                         case 2:
                             Intent t=new Intent(mContext,TabActivity.class);
-                            t.putExtra("name", item.getTitle());
+                            t.putExtra("name", mContext.getResources().getString(R.string.Tabs));
                             t.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             mContext.startActivity(t);
-                            Toast.makeText(mContext, item.getTitle(), Toast.LENGTH_LONG).show();
+                            //Toast.makeText(mContext, item.getTitle(), Toast.LENGTH_LONG).show();
                             break;
                         case 3:
                             Intent s=new Intent(mContext,LanguagyActivity.class);
-                            s.putExtra("name", item.getTitle());
+                            s.putExtra("name", mContext.getResources().getString(R.string.Setting));
                             s.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             mContext.startActivity(s);
-                            Toast.makeText(mContext, item.getTitle(), Toast.LENGTH_LONG).show();
+                           // Toast.makeText(mContext, item.getTitle(), Toast.LENGTH_LONG).show();
                             break;
                         case 4:
-                            Intent C=new Intent(mContext,Date_bicker.class);
-                            C.putExtra("name", item.getTitle());
+                            Intent C=new Intent(mContext,DataBikerActivity.class);
+                            C.putExtra("name", mContext.getResources().getString(R.string.Calender));
                             C.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             mContext.startActivity(C);
-                            Toast.makeText(mContext, item.getTitle(), Toast.LENGTH_LONG).show();
+                           // Toast.makeText(mContext, item.getTitle(), Toast.LENGTH_LONG).show();
                             break;
 
                     }

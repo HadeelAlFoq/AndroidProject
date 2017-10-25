@@ -16,27 +16,27 @@ import java.util.ArrayList;
  * Created by hadeel on 9/19/2017.
  */
 
-public class personAdapter extends RecyclerView.Adapter<personAdapter.ViewHolder> {
-    ArrayList<personItem> personList=new ArrayList<>();
+public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder> {
+    ArrayList<PersonItemActivity> personList=new ArrayList<>();
     private Context mContext;
-    public personAdapter(ArrayList<personItem> personList,Context mContext){
+    public PersonAdapter(ArrayList<PersonItemActivity> personList, Context mContext){
         this.personList=personList;
         this.mContext=mContext;
     }
     @Override
-    public personAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public PersonAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView= LayoutInflater.from(parent.getContext()).inflate(R.layout.person_content_row,parent,false);
-        return new personAdapter.ViewHolder(itemView);
+        return new PersonAdapter.ViewHolder(itemView);
     }
     @Override
-    public void onBindViewHolder(personAdapter.ViewHolder holder, int position) {
-        final personItem item=personList.get(position);
+    public void onBindViewHolder(PersonAdapter.ViewHolder holder, int position) {
+        final PersonItemActivity item=personList.get(position);
         holder.name.setText(personList.get(position).getName());
         holder.person.setImageResource(personList.get(position).getPicPerson());
         holder.person.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent per=new Intent(mContext,Option_Activity.class);
+                Intent per=new Intent(mContext,OptionActivity.class);
                 per.putExtra("name",item.getName());
                 per.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 mContext.startActivity(per);
@@ -66,15 +66,7 @@ public class personAdapter extends RecyclerView.Adapter<personAdapter.ViewHolder
 
         }
 
-//        public void setItemClickListener(ItemClickListener itemClickListener){
-//            this.itemClickListener=itemClickListener;
-//        }
-//
-//        @Override
-//        public void onClick(View v) {
-//            itemClickListener.onClick(v,getAdapterPosition(),false);
-//
-//        }
+
 
     }
 }

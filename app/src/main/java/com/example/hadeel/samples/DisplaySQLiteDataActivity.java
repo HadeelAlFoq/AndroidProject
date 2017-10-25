@@ -11,10 +11,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -22,7 +19,7 @@ public class DisplaySQLiteDataActivity extends AppCompatActivity {
     SqliteHelper sqLiteHelper;
     SQLiteDatabase sqLiteDatabase;
     Cursor cursor;
-    dataBaseAdapter Adapter ;
+    DataBaseAdapter Adapter ;
     RecyclerView recyclerView;
     TextView delete,name,lastName;
     FloatingActionButton add;
@@ -44,7 +41,7 @@ public class DisplaySQLiteDataActivity extends AppCompatActivity {
 
 
         toolbar=(Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle(getintent);
+        toolbar.setTitle(getResources().getString(R.string.DataBase));
         toolbar.setTitleTextColor(getResources().getColor(R.color.login));
         setSupportActionBar(toolbar);
         if(getSupportActionBar()!=null) {
@@ -69,29 +66,37 @@ public class DisplaySQLiteDataActivity extends AppCompatActivity {
 
         sqLiteHelper = new SqliteHelper(this);
         add=(FloatingActionButton) findViewById(R.id.add);
-        name=(TextView) findViewById(R.id.textTool);
         lastName=(TextView) findViewById(R.id.lastNameText);
 
         delete=(TextView) findViewById(R.id.delete);
         add.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                //deleteRow();
                 Intent i=new Intent(DisplaySQLiteDataActivity.this,InsertDataActivity.class);
                startActivity(i);
 
             }
         });
 
+        toolbar= (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(getintent);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.login));
+
+        setSupportActionBar(toolbar);
+
+        if(getSupportActionBar()!=null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeButtonEnabled(true);
+
+        }
 
 
-        toolbar.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View view ){
-//                Intent i=new Intent(DisplaySQLiteDataActivity.this,Home.class);
-//                startActivity(i);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(DisplaySQLiteDataActivity.this,HomeActivity.class);
+                startActivity(i);
+                onBackPressed();
+
                 finish();
-                Toast.makeText(getApplication(),getintent,Toast.LENGTH_LONG).show();
             }
         });
 
@@ -140,7 +145,7 @@ public class DisplaySQLiteDataActivity extends AppCompatActivity {
             } while (cursor.moveToNext());
         }
 
-        Adapter = new dataBaseAdapter(DisplaySQLiteDataActivity.this,
+        Adapter = new DataBaseAdapter(DisplaySQLiteDataActivity.this,
 
 
                 NAME_Array,

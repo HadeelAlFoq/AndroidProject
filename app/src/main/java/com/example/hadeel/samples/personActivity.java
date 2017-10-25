@@ -15,10 +15,10 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class personActivity extends AppCompatActivity {
+public class PersonActivity extends AppCompatActivity {
     RecyclerView recyclerView;
-    personAdapter adapter;
-    ArrayList<personItem> personList;
+    PersonAdapter adapter;
+    ArrayList<PersonItemActivity> personList;
     Toolbar toolbar;
     TextView back;
 
@@ -26,8 +26,9 @@ public class personActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.person_activity);
+
         toolbar=(Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Add friend");
+        toolbar.setTitle(getResources().getString(R.string.AddFriend));
         toolbar.setTitleTextColor(getResources().getColor(R.color.login));
 
         setSupportActionBar(toolbar);
@@ -48,10 +49,10 @@ public class personActivity extends AppCompatActivity {
 
 
 
-        personList= new ArrayList<personItem>();
+        personList= new ArrayList<PersonItemActivity>();
         recyclerView=(RecyclerView)findViewById(R.id.personRececlerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplication()));
-        adapter=new personAdapter(personList,getApplicationContext());
+        adapter=new PersonAdapter(personList,getApplicationContext());
         recyclerView.setAdapter(adapter);
         preparedData();
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -59,17 +60,17 @@ public class personActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.content:
-                        Intent c=new Intent(personActivity.this,Bottom_tab.class);
+                        Intent c=new Intent(PersonActivity.this,BottomTabActivity.class);
                         startActivity(c);
                         break;
                     case R.id.notification:
-                        Toast.makeText(personActivity.this,"Notification",Toast.LENGTH_LONG).show();
+                        Toast.makeText(PersonActivity.this,"Notification",Toast.LENGTH_LONG).show();
                         break;
                     case R.id.person:
                        Toast.makeText(getApplication(),"You in person activity",Toast.LENGTH_LONG).show();
                         break;
                     case R.id.option:
-                        Intent o=new Intent(personActivity.this,Option_Activity.class);
+                        Intent o=new Intent(PersonActivity.this,OptionActivity.class);
                         o.putExtra("namepage","Profile");
 
                         startActivity(o);
@@ -84,27 +85,27 @@ public class personActivity extends AppCompatActivity {
 
     }
     public void preparedData(){
-        personItem item=new personItem();
+        PersonItemActivity item=new PersonItemActivity();
         item.setPicPerson(R.drawable.person);
         item.setName("Ahmed Kamal");
         personList.add(item);
 
-        personItem item1=new personItem();
+        PersonItemActivity item1=new PersonItemActivity();
         item1.setPicPerson(R.drawable.person);
         item1.setName("karem Kaml");
         personList.add(item1);
 
-        personItem item2=new personItem();
+        PersonItemActivity item2=new PersonItemActivity();
         item2.setPicPerson(R.drawable.person);
         item2.setName("karem Kaml");
         personList.add(item2);
 
-        personItem item3=new personItem();
+        PersonItemActivity item3=new PersonItemActivity();
         item3.setPicPerson(R.drawable.person);
         item3.setName("dena saad");
         personList.add(item3);
 
-        personItem item4=new personItem();
+        PersonItemActivity item4=new PersonItemActivity();
         item4.setPicPerson(R.drawable.person);
         item4.setName("lelas omar");
         personList.add(item4);

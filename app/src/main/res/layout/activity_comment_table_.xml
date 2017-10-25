@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context="com.example.hadeel.chatapp.MainActivity">
+    tools:context="com.example.hadeel.samples.CommentTableActivity">
     <include layout="@layout/toolbar"/>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,18 +16,19 @@
         android:paddingRight="16dp"
         android:paddingBottom="16dp">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/insert"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:clickable="true"
-        android:src="@drawable/ic_send"
 
-        android:tint="@android:color/white"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        app:fabSize="mini"
-        />
+
+        <ImageButton
+            android:id="@+id/insert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:paddingStart="5dp"
+            android:paddingTop="20dp"
+            android:src="@drawable/ic_comentic"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"/>
+
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,7 +38,7 @@
         >
         <EditText
             android:id="@+id/commentEText"
-            android:layout_width="match_parent"
+            android:layout_width="260dp"
             android:layout_height="wrap_content"
             android:hint="@string/commentHint"/>
     </android.support.design.widget.TextInputLayout>

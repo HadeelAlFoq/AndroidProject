@@ -4,7 +4,7 @@ package com.example.hadeel.samples;
  * Created by hadeel on 9/19/2017.
  */
 
-public class personItem {
+public class PersonItemActivity {
     private int picPerson;
     private String Name;
 

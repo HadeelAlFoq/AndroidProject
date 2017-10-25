@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.hadeel.samples.CountryDetails">
+    tools:context="com.example.hadeel.samples.CountryDetailsActivity">
     <include
 
         layout="@layout/toolbar"/>
@@ -104,7 +104,7 @@
                 android:drawableStart="@drawable/ic_web"
                 android:drawablePadding="10dp"
                 android:textColor="@color/colorPrimary"
-                android:text="@string/map"/>
+                android:text="@string/browser"/>
             <View
                 android:layout_marginTop="150dp"
                 android:layout_width="match_parent"
@@ -125,7 +125,7 @@
 
 
                 android:textColor="@color/colorPrimary"
-                android:text="@string/browser"/>
+                android:text="@string/map"/>
 
 
 

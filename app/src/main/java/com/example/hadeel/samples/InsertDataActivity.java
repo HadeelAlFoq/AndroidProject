@@ -54,7 +54,7 @@ public class InsertDataActivity extends AppCompatActivity {
         db = new SqliteHelper(this);
 
         Toolbar toolbar=(Toolbar)findViewById(R.id.toolbar);
-        toolbar.setTitle("Insert");
+        toolbar.setTitle(getResources().getString(R.string.insertTitle));
         toolbar.setTitleTextColor(getResources().getColor(R.color.login));
 
         setSupportActionBar(toolbar);
@@ -67,6 +67,8 @@ public class InsertDataActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 onBackPressed();
+
+                finish();
             }
         });
 
@@ -85,9 +87,9 @@ public class InsertDataActivity extends AppCompatActivity {
         inputName.addTextChangedListener(new MyTextWatcher(inputName));
         inputEmail.addTextChangedListener(new MyTextWatcher(inputEmail));
         inputPhone.addTextChangedListener(new MyTextWatcher(inputPhone));
+        inputAge.addTextChangedListener(new MyTextWatcher(inputAge));
 
 
-        name=(TextView)  findViewById(R.id.textTool);
         NAME_Array = new ArrayList<String>();
 
 
@@ -99,12 +101,13 @@ public class InsertDataActivity extends AppCompatActivity {
             public void onClick(View view) {
 
 
-               // SQLiteDataBaseBuild();
-               // SQLiteTableBuild();
+                boolean submit= submitForm();
+                if(submit==true) {
 
-                Insert();
-                LAST();
-                share();
+                    Insert();
+                    LAST();
+                    share();
+                }
 
 
 
@@ -138,13 +141,12 @@ public class InsertDataActivity extends AppCompatActivity {
          Name = inputName .getText().toString();
          Phone = inputPhone.getText().toString();
          Email=inputEmail.getText().toString();
-        String Year = inputAge.getText().toString();
-        int enterYear = Integer.parseInt(Year);
-        int result = year - enterYear;
-        String Age = Integer.toString(result);
+         String Year = inputAge.getText().toString();
+         int enterYear = Integer.parseInt(Year);
+         int result = year - enterYear;
+         Age = String.valueOf(result);
 
-        boolean submit= submitForm();
-        if(submit==true){
+
 
 
 
@@ -154,7 +156,7 @@ public class InsertDataActivity extends AppCompatActivity {
         Intent d = new Intent(InsertDataActivity.this, DisplaySQLiteDataActivity.class);
 
         startActivity(d);
-        }
+
     }
     public void LAST() {
         sqLiteDatabase = db.getWritableDatabase();
@@ -198,10 +200,16 @@ public class InsertDataActivity extends AppCompatActivity {
         if (!validatePhone()) {
             return false;
         }
+
+        if (!validateYear()) {
+            return false;
+        }
         else return true;
 
 
     }
+
+
 
     private boolean validateName() {
         if (inputName.getText().toString().trim().isEmpty()) {
@@ -230,12 +238,23 @@ public class InsertDataActivity extends AppCompatActivity {
     }
 
     private boolean validatePhone() {
-        if (inputPhone.getText().toString().trim().isEmpty()&&inputPhone.length()<10) {
+        if (inputPhone.getText().toString().trim().length()<10) {
             inputLayoutPhone.setError(getString(R.string.err_msg_phone));
             requestFocus(inputPhone);
             return false;
         } else {
             inputLayoutPhone.setErrorEnabled(false);
+        }
+
+        return true;
+    }
+    private boolean validateYear() {
+        if (inputAge.getText().toString().trim().isEmpty()) {
+            inputLayoutAge.setError(getString(R.string.err_msg_age));
+            requestFocus(inputAge);
+            return false;
+        } else {
+            inputLayoutAge.setErrorEnabled(false);
         }
 
         return true;
@@ -274,6 +293,9 @@ public class InsertDataActivity extends AppCompatActivity {
                     break;
                 case R.id.input_phone:
                     validatePhone();
+                    break;
+                case R.id.input_age:
+                    validateYear();
                     break;
             }
         }

@@ -10,13 +10,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.zip.Inflater;
 
 /**
  * Created by hadeel on 9/7/2017.
  */
 
-public class dataBaseAdapter extends RecyclerView.Adapter<dataBaseAdapter.ViewHolder> {
+public class DataBaseAdapter extends RecyclerView.Adapter<DataBaseAdapter.ViewHolder> {
     Context context;
     SQLiteDatabase sqLiteDatabase;
     SqliteHelper sqLiteHelper;
@@ -25,11 +24,11 @@ public class dataBaseAdapter extends RecyclerView.Adapter<dataBaseAdapter.ViewHo
     ArrayList<String> PhoneNumber;
     ArrayList<String> Email;
     ArrayList<String> Age;
-    private dataBaseAdapter thisAdapter = this;
-    public  dataBaseAdapter( Context context,
-                             ArrayList<String> Name,
-            ArrayList<String> PhoneNumber,
-            ArrayList<String> Email,ArrayList<String> Age){
+    private DataBaseAdapter thisAdapter = this;
+    public DataBaseAdapter(Context context,
+                           ArrayList<String> Name,
+                           ArrayList<String> PhoneNumber,
+                           ArrayList<String> Email, ArrayList<String> Age){
         this.context=context;
         this.Name=Name;
         this.PhoneNumber=PhoneNumber;
@@ -39,15 +38,15 @@ public class dataBaseAdapter extends RecyclerView.Adapter<dataBaseAdapter.ViewHo
     }
 
     @Override
-    public dataBaseAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public DataBaseAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView= LayoutInflater.from(parent.getContext()).inflate(R.layout.content_row_database,parent,false);
-        return new dataBaseAdapter.ViewHolder(itemView);
+        return new DataBaseAdapter.ViewHolder(itemView);
     }
 
 
 
     @Override
-    public void onBindViewHolder(final dataBaseAdapter.ViewHolder holder, final int position) {
+    public void onBindViewHolder(final DataBaseAdapter.ViewHolder holder, final int position) {
         holder.name.setText(Name.get(position));
         holder.phone.setText(PhoneNumber.get(position));
         holder.email.setText(Email.get(position));
@@ -86,7 +85,7 @@ public class dataBaseAdapter extends RecyclerView.Adapter<dataBaseAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder   {
         TextView name,email,phone,age,delete;
-       // private  ItemClickListener itemClickListener;
+
 
         public ViewHolder(View itemView) {
 
@@ -96,16 +95,8 @@ public class dataBaseAdapter extends RecyclerView.Adapter<dataBaseAdapter.ViewHo
             email=(TextView) itemView.findViewById(R.id.email);
             age=(TextView) itemView.findViewById(R.id.age);
             delete=(TextView) itemView.findViewById(R.id.delete);
-           // itemView.setOnClickListener(this);
         }
-//        public void setItemClickListener(ItemClickListener itemClickListener){
-//            this.itemClickListener=itemClickListener;}
-//
-//        @Override
-//        public void onClick(View v) {
-//            itemClickListener.onClick(v,getAdapterPosition(),false);
-//
-//        }
+
 
     }
 }

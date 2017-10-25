@@ -1,12 +1,7 @@
 package com.example.hadeel.samples;
 
-import android.content.Intent;
-import android.net.Uri;
-import android.provider.Settings;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -32,14 +27,14 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Home extends AppCompatActivity implements SearchView.OnQueryTextListener {
+public class HomeActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
     ActionBarDrawerToggle mDrawerToggle;
     String url ="http://api.aadv01jo2017001.dev.dot.jo/v1/research/researches/available-countries";
     TextView country;
     RecyclerView countryView;
     RecyclerView navView;
-    private List<country> countryList;
-    ArrayList<DrawerItem> navList;
+    private List<CountryModel> countryModelList;
+    ArrayList<DrawerItemModel> navList;
     private CountryAdapter adapter;
     private NavigationAdapter adapter1;
 
@@ -48,23 +43,22 @@ public class Home extends AppCompatActivity implements SearchView.OnQueryTextLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Home");
+        toolbar.setTitle(getResources().getString(R.string.HomeTitle));
         toolbar.setTitleTextColor(getResources().getColor(R.color.login));
 
-        countryList=new ArrayList<>();
+        countryModelList =new ArrayList<>();
         navList=new ArrayList<>();
         countryView=(RecyclerView)findViewById(R.id.recyclerView);
         countryView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         navView=(RecyclerView)findViewById(R.id.recyclerViewnav);
         navView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
-       // NavigationView navigationView=(NavigationView)findViewById(R.id.navigationView);
 
 
        setSupportActionBar(toolbar);
-       navList = new ArrayList<DrawerItem>();
+       navList = new ArrayList<DrawerItemModel>();
 
-       NavigationAdapter adapter1 = new NavigationAdapter(navList,getBaseContext());
+        NavigationAdapter adapter1 = new NavigationAdapter(navList,getBaseContext());
         navView.setLayoutManager(new LinearLayoutManager(this));
         navView.setAdapter(adapter1);
         mDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close) {
@@ -73,14 +67,14 @@ public class Home extends AppCompatActivity implements SearchView.OnQueryTextLis
                 super.onDrawerClosed(drawerView);
                 //TODO Add some action here
                 //Executed when drawer closes
-                Toast.makeText(Home.this, "Closed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(HomeActivity.this, "Closed", Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
                 //TODO Add some action here
                 //executes when drawer open
-                Toast.makeText(Home.this, "Opened", Toast.LENGTH_SHORT).show();
+                Toast.makeText(HomeActivity.this, "Opened", Toast.LENGTH_SHORT).show();
             }
         };
         drawerLayout.setDrawerListener(mDrawerToggle);
@@ -96,27 +90,27 @@ public class Home extends AppCompatActivity implements SearchView.OnQueryTextLis
 
     }
     public void preparedData(){
-        DrawerItem item = new DrawerItem();
+        DrawerItemModel item = new DrawerItemModel();
         item.setIcon(R.drawable.ic_database1);
-        item.setTitle("DataBase");
+        item.setTitle(R.string.DataBase);
         navList.add(item);
-        DrawerItem item2 = new DrawerItem();
+        DrawerItemModel item2 = new DrawerItemModel();
         item2.setIcon(R.drawable.ic_bottom1);
-        item2.setTitle("Bottoms");
+        item2.setTitle(R.string.Bottoms);
         navList.add(item2);
-        DrawerItem item3 = new DrawerItem();
+        DrawerItemModel item3 = new DrawerItemModel();
         item3.setIcon(R.drawable.ic_tab1);
-        item3.setTitle("Tabs");
+        item3.setTitle(R.string.Tabs);
         navList.add(item3);
 
-        DrawerItem item4 = new DrawerItem();
+        DrawerItemModel item4 = new DrawerItemModel();
         item4.setIcon(R.drawable.ic_settingic);
-        item4.setTitle("Setting");
+        item4.setTitle(R.string.Setting);
         navList.add(item4);
 
-        DrawerItem item5 = new DrawerItem();
+        DrawerItemModel item5 = new DrawerItemModel();
         item5.setIcon(R.drawable.ic_calender);
-        item5.setTitle("Calender");
+        item5.setTitle(R.string.Calender);
         navList.add(item5);
     }
     @Override
@@ -140,16 +134,15 @@ public class Home extends AppCompatActivity implements SearchView.OnQueryTextLis
         StringRequest stringRequest=new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-               // Toast.makeText(getApplication(),response,Toast.LENGTH_LONG).show();
                 try {
                     JSONObject jsonObject=new JSONObject(response);
                     JSONArray array= jsonObject.getJSONArray("data");
                     for(int i=0;i<array.length();i++){
                         JSONObject obj=array.getJSONObject(i);
-                        country cont=new country(obj.getString("name"));
-                        countryList.add(cont);
+                        CountryModel cont=new CountryModel(obj.getString("name"));
+                        countryModelList.add(cont);
                     }
-                    adapter=new CountryAdapter(countryList,getApplicationContext());
+                    adapter=new CountryAdapter(countryModelList,getApplicationContext());
                     countryView.setAdapter(adapter);
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -164,7 +157,7 @@ public class Home extends AppCompatActivity implements SearchView.OnQueryTextLis
 
             }
         });
-        MySingletone.getInstance(Home.this).addTorequestqueue(stringRequest);
+        MySingletone.getInstance(HomeActivity.this).addTorequestqueue(stringRequest);
 
     }
 
@@ -177,8 +170,8 @@ public class Home extends AppCompatActivity implements SearchView.OnQueryTextLis
     @Override
     public boolean onQueryTextChange(String newText) {
         newText=newText.toLowerCase();
-        ArrayList<country> newList=new ArrayList<>();
-        for(country countr:countryList){
+        ArrayList<CountryModel> newList=new ArrayList<>();
+        for(CountryModel countr: countryModelList){
             String name=countr.getCountry().toLowerCase();
             if (name.contains(newText)) {
                 newList.add(countr);

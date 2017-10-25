@@ -5,15 +5,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.net.Uri;
-import android.os.Bundle;
-import android.provider.MediaStore;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,7 +17,6 @@ import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-import static android.app.Activity.RESULT_OK;
 import static android.media.CamcorderProfile.get;
 
 /**
@@ -30,7 +24,7 @@ import static android.media.CamcorderProfile.get;
  */
 
 public class BottomAdapter extends RecyclerView.Adapter<BottomAdapter.ViewHolder> {
-    public static int sum0,sum1,sum2;
+    public  static int sum0,sum1,sum2;
     SQLiteDatabase sqLiteDatabase;
 
     SqliteHelper db;
@@ -45,8 +39,10 @@ public class BottomAdapter extends RecyclerView.Adapter<BottomAdapter.ViewHolder
     Activity activity;
     ArrayList<BottomItem> bottomList=new ArrayList<>();
     private Context mContext;
-    public  BottomAdapter(ArrayList<BottomItem> bottomList,Context mContext){
+    private OnCommentClick listener;
+    public  BottomAdapter(ArrayList<BottomItem> bottomList,Context mContext,OnCommentClick listener){
         this.bottomList=bottomList;
+        this.listener=listener;
         this.mContext=mContext;
 
     }
@@ -68,7 +64,7 @@ public class BottomAdapter extends RecyclerView.Adapter<BottomAdapter.ViewHolder
         holder.title.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent pr=new Intent(mContext,Option_Activity.class);
+                Intent pr=new Intent(mContext,OptionActivity.class);
                 pr.putExtra("name",item.getTitle());
                 pr.putExtra("namepage","profile");
 
@@ -80,7 +76,7 @@ public class BottomAdapter extends RecyclerView.Adapter<BottomAdapter.ViewHolder
         });
         holder.profile.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
-                Intent pr = new Intent(mContext, Option_Activity.class);
+                Intent pr = new Intent(mContext, OptionActivity.class);
                 pr.putExtra("name", item.getTitle());
                 pr.putExtra("namepage","profile");
                 pr.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -117,14 +113,8 @@ public class BottomAdapter extends RecyclerView.Adapter<BottomAdapter.ViewHolder
 
             @Override
             public void onClick(View v) {
-                String posi=String.valueOf(position);
-                Toast.makeText(mContext,posi,Toast.LENGTH_LONG).show();
-                Intent commInt=new Intent(mContext,CommentTable_Activity.class);
-                commInt.putExtra("name","Comment");
-                commInt.putExtra("position",posi);
-                commInt.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-                mContext.startActivity(commInt);           }
+               listener.onClommentClickListener(bottomList.get(holder.getAdapterPosition()),holder.getAdapterPosition());
+            }
         });
 
 
@@ -137,24 +127,10 @@ public class BottomAdapter extends RecyclerView.Adapter<BottomAdapter.ViewHolder
     public int getItemCount() {
         return bottomList.size() ;
     }
-    public int getCommentCounter() {
 
-//        int countComment=0;
-//        String query="SELECT comment FROM commentTable";
-//        Cursor cursor = sqLiteDatabase.rawQuery(query, null);
-//        if(cursor.getCount()>0){
-//            cursor.moveToFirst();
-//            countComment =countComment+1;
-//
-//        }
-//        cursor.close();
-       return 0;
-
-
-    }
 
     public class ViewHolder extends RecyclerView.ViewHolder  {
-       // private ItemClickListener itemClickListener;
+
         ImageView image;
         CircleImageView profile;
         TextView  title,like,likeCounter,comment,commentCount;
@@ -169,25 +145,15 @@ public class BottomAdapter extends RecyclerView.Adapter<BottomAdapter.ViewHolder
             comment =(TextView)itemView.findViewById(R.id.commentic);
             commentCount= (TextView)itemView.findViewById(R.id.comment);
 
-            //itemView.setOnClickListener(this);
         }
 
-//        public void setItemClickListener(ItemClickListener itemClickListener){
-//            this.itemClickListener=itemClickListener;
-//        }
-//
-//        @Override
-//        public void onClick(View v) {
-//            itemClickListener.onClick(v,getAdapterPosition(),false);
-//
-//
-//        }
-//        public boolean onLongClick(View v) {
-//            itemClickListener.onClick(v,getAdapterPosition(),false);
-//            return true;
-//        }
 
 
+
+    }
+
+    interface OnCommentClick{
+        void onClommentClickListener(BottomItem item,int position);
     }
 
 }

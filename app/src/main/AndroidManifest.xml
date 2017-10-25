@@ -32,20 +32,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Home" />
-        <activity android:name=".CountryDetails" />
-        <activity android:name=".DataBase" />
-        <activity android:name=".InsertDataActivity" />
-        <activity android:name=".DisplaySQLiteDataActivity" />
-        <activity android:name=".Bottom_tab" />
-        <activity android:name=".TabActivity" />
+        <activity android:name=".HomeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".CountryDetailsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DataBase"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".InsertDataActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DisplaySQLiteDataActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".BottomTabActivity"
+
+            android:screenOrientation="portrait"/>
+        <activity android:name=".TabActivity"
+            android:screenOrientation="portrait"/>
 
         <service android:name=".MyFirebaseMessagingService">
             <intent-filter>
@@ -58,7 +67,7 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".GoogleMap" />
+        <activity android:name=".GoogleMapActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -95,14 +104,25 @@
 
         <application android:name="android.support.multidex.MultiDexApplication" />
 
-        <activity android:name=".Main2Activity" />
-        <activity android:name=".personActivity" />
-        <activity android:name=".Option_Activity" />
-        <activity android:name=".LanguagyActivity" />
-        <activity android:name=".Massage" />
-        <activity android:name=".CommentTable_Activity" />
+        <activity android:name=".Main2Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".PersonActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".OptionActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".LanguagyActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MassageActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".CommentTableActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".Calender" />
-        <activity android:name=".Date_bicker"></activity>
+        <activity android:name=".DataBikerActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:isScrollContainer="true"></activity>
     </application>
 
 </manifest>

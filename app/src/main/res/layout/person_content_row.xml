@@ -37,8 +37,11 @@
             android:layout_marginTop="170dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:drawableLeft="@drawable/ic_addfriend"
+            android:drawableStart="@drawable/ic_addfriend"
             android:text="@string/addFri"
+            android:textSize="20dp"
+            android:clickable="true"
+            android:textColor="@drawable/selector_add_friend"
             android:padding="24dp"
             android:drawablePadding="12dp"
             />
